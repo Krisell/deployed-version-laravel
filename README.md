@@ -1,7 +1,5 @@
 # Deployed Version Laravel
-This package helps with determining which version ofyour app is currently running. This is useful during a deploy, to see when it is finished, and also when you rollback to ensure that the correct version is used.
-
-By "version" I refer to a git commit hash, but you can use any convention and value you like (for instance version number in composer.json).
+This package helps with determining which version of your app is currently running. This is useful during a deploy, to see when it is finished, and also when you rollback to ensure that the correct version is loaded.
 
 ## Installation
 Add the package to your Laravel project.
@@ -19,7 +17,7 @@ You need to set the value of this variable during your buld or deploy process.
 VERSION=YOUR_VERSION_VALUE
 ```
 
-One way to achieve this is to run the following script, but you may do it however you like:
+One way to achieve this is to run the following script, which uses the git hash as the version number, but you may do it however you like:
 
 ```bash
 echo "VERSION=$(git -C gitdir rev-parse HEAD)" >> .env.current-build
