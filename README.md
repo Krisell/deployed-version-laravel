@@ -11,7 +11,7 @@ The package is configured for automatic discovery, so unless you have other sett
 ## Usage
 The package adds a route `/version` which displays the value of the environment-variable VERSION.
 
-You need to set the value of this variable during your buld or deploy process.
+You need to set the value of this variable during your build or deploy process.
 
 ```bash
 VERSION=YOUR_VERSION_VALUE
