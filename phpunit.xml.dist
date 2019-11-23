@@ -16,5 +16,6 @@
     </testsuites>
     <php>
         <env name="VERSION" value="TESTING_VALUE"/>
+        <env name="VERSION_ROUTE_PREFIX" value="dev-custom"/>
     </php>
 </phpunit>

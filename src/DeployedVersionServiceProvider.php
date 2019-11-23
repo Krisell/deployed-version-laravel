@@ -10,13 +10,14 @@ class DeployedVersionServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        Route::get('/version', VersionController::class);
+        Route::get(config('deployed-version.route-prefix') . '/version', VersionController::class);
     }
 
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/config/deployed-version.php', 'deployed-version'
+            __DIR__.'/config/deployed-version.php',
+            'deployed-version'
         );
     }
 }
