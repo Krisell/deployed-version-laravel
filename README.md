@@ -9,7 +9,7 @@ Add the package to your Laravel project.
 The package is configured for automatic discovery, so unless you have other settings, you do not need to manually add the service provider.
 
 ## Usage
-The package adds a route `/version` which displays the value of the environment-variable VERSION.
+The package by default adds a route `/version` which displays the value of the environment-variable `VERSION`.
 
 You need to set the value of this variable during your build or deploy process.
 
@@ -24,6 +24,20 @@ echo "VERSION=$(git -C gitdir rev-parse HEAD)" >> .env.current-build
 ```
 
 `.env.current-build` refers to a copy of the `.env-file`, to ensure that the addition is not persistent.
+
+The route can be customized by setting an optional prefix,
+
+```bash
+VERSION_ROUTE_PREFIX=custom-prefix
+```
+Which makes the route `/custom-prefix/version`.
+
+The route returns simple JSON data,
+```json
+{
+  "version": "version-number"
+}
+```
 
 ## Licence
 MIT
