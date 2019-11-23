@@ -23,7 +23,7 @@ One way to achieve this is to run the following script, which uses the git hash 
 echo "VERSION=$(git -C gitdir rev-parse HEAD)" >> .env.current-build
 ```
 
-.env.current-build refers to a copy of the .env-file, to ensure that the addition is not persistent.
+`.env.current-build` refers to a copy of the `.env-file`, to ensure that the addition is not persistent.
 
 ## Licence
 MIT
